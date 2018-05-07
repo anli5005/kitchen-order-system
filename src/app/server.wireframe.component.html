@@ -1,0 +1,15 @@
+<div class="w-100 h-100 m-0 p-0 bg-white">
+  <ul class="nav nav-tabs pt-3 px-3 bg-light">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/server/menu" [ngClass]="{active: pageName === 'menu'}" translate="server.nav.menu"></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/server/seats" [ngClass]="{active: pageName === 'seats'}" translate="server.nav.seats"></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/server/prep" [ngClass]="{active: pageName === 'prep'}" translate="server.nav.prep"></a>
+    </li>
+  </ul>
+  <ng-content></ng-content>
+  <button class="btn btn-danger position-absolute" style="top: 8px; right: 8px;" (click)="logOut()"><span translate="server.nav.logout"></span>&nbsp;<i class="fa fa-sign-out-alt"></i></button>
+</div>

@@ -1,0 +1,16 @@
+{
+  "test": "你好！",
+  "language": {
+    "select": "选择一种语言"
+  },
+  "actions": {
+    "prev": "<i class='fa fa-arrow-left'></i> 前一步",
+    "next": "下一步 <i class='fa fa-arrow-right'></i>"
+  },
+  "seat": {
+    "title": "您坐在那儿？",
+    "prompt": "输入你的座位代码",
+    "placeholder": "座位代码",
+    "checking": "请稍候..."
+  }
+}

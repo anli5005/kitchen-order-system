@@ -1,0 +1,16 @@
+<kos-intro>
+  <h3 class="display-4 text-center m-3" translate="seat.title">Where are you sitting?</h3>
+  <div class="p-5">
+    <div class="form-group" *ngIf="!checking">
+      <label for="seat-code-input" translate="seat.prompt">Enter your seat code here.</label>
+      <input class="form-control" id="seat-code-input" type="text" [(ngModel)]="seatCode" [placeholder]="'seat.placeholder' | translate" />
+    </div>
+    <div *ngIf="checking" class="w-100 text-center">
+      <span class="text-primary"><i class="fa fa-circle-notch fa-spin"></i></span>&nbsp;<span translate="seat.checking"></span>
+    </div>
+  </div>
+  <div class="d-flex container-fluid align-items-center justify-content-center mt-3">
+    <button class="btn btn-secondary mr-1" routerLink="/" [innerHTML]="'actions.prev' | translate" [disabled]="checking"></button>
+    <button class="btn btn-primary ml-1" [innerHTML]="'actions.next' | translate" [disabled]="checking || !seatCode" (click)="checkSeat()"></button>
+  </div>
+</kos-intro>

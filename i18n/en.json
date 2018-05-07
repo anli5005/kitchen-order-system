@@ -1,0 +1,30 @@
+{
+  "test": "Hello, world!",
+  "language": {
+    "select": "Select a language"
+  },
+  "actions": {
+    "prev": "<i class='fa fa-arrow-left'></i> Prev",
+    "next": "Next <i class='fa fa-arrow-right'></i>"
+  },
+  "seat": {
+    "title": "Where are you sitting?",
+    "prompt": "Enter your seat code here.",
+    "placeholder": "Seat Code",
+    "checking": "Checking..."
+  },
+  "server": {
+    "login": {
+      "title": "Log in to continue",
+      "placeholder": "Password",
+      "action": "Log in <i class='fa fa-arrow-right'></i>",
+      "loading": "Logging in..."
+    },
+    "nav": {
+      "menu": "Menu",
+      "seats": "Seating",
+      "prep": "Kitchen",
+      "logout": "Log Out"
+    }
+  }
+}

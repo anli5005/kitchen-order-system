@@ -1,0 +1,11 @@
+<kos-intro>
+  <h3 class="display-4 text-center m-3" translate="language.select">Select a language</h3>
+  <div class="list-group w-50 mx-auto p-0">
+    <button class="list-group-item list-group-item-action" [ngClass]="{active: translate.currentLang === 'en'}" (click)="selectLanguage('en')">🇺🇸 English</button>
+    <button class="list-group-item list-group-item-action" [ngClass]="{active: translate.currentLang === 'zh-cn'}" (click)="selectLanguage('zh-cn')">🇨🇳 中文</button>
+  </div>
+  <div class="d-flex container-fluid align-items-center justify-content-center mt-3">
+    <a class="btn btn-primary" routerLink="/seat" [innerHTML]="'actions.next' | translate"></a>
+  </div>
+  <a class="text-black-50" routerLink="/server">Server Mode (English Only)</a>
+</kos-intro>
