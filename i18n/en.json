@@ -25,6 +25,21 @@
       "seats": "Seating",
       "prep": "Kitchen",
       "logout": "Log Out"
+    },
+    "menu": {
+      "title": "Menu",
+      "description": "Add and edit your menu items here."
+    },
+    "seats": {
+      "title": "Seats",
+      "description": "Manage your restaurant's seating."
+    },
+    "prep": {
+      "title": "Kitchen",
+      "description": "View and track orders in real time.",
+      "session": {
+        "start": "Start session"
+      }
     }
   }
 }

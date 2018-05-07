@@ -12,6 +12,8 @@ import { HomeComponent } from './home.component';
 import { SeatComponent } from './seat.component';
 import { ServerLoginComponent } from './server.login.component';
 import { ServerMenuComponent } from './server.menu.component';
+import { ServerSeatsComponent } from './server.seats.component';
+import { ServerPrepComponent } from './server.prep.component';
 import { ServerWireframeComponent } from './server.wireframe.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -34,6 +36,14 @@ const appRoutes: Routes = [
   {
     path: "server/menu",
     component: ServerMenuComponent
+  },
+  {
+    path: "server/seats",
+    component: ServerSeatsComponent
+  },
+  {
+    path: "server/prep",
+    component: ServerPrepComponent
   }
 ];
 
@@ -45,6 +55,8 @@ const appRoutes: Routes = [
     SeatComponent,
     ServerLoginComponent,
     ServerMenuComponent,
+    ServerSeatsComponent,
+    ServerPrepComponent,
     ServerWireframeComponent
   ],
   imports: [
