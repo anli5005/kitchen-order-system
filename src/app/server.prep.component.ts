@@ -5,5 +5,5 @@ import { Component } from '@angular/core';
   templateUrl: './server.prep.component.html',
 })
 export class ServerPrepComponent {
-
+  
 }

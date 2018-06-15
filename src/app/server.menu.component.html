@@ -3,4 +3,47 @@
     <h3 class="display-2" translate="server.menu.title"></h3>
     <p class="lead" translate="server.menu.description"></p>
   </div>
+  <div *ngFor="let section of sections">
+    <a class="d-block py-1 bg-secondary border-top border-bottom text-white" (click)="editSection(section)">
+      <div class="container">{{section.name}}</div>
+    </a>
+  </div>
+  <a class="d-block py-1 bg-secondary border-top border-bottom text-white" (click)="newSection()">
+    <div class="container"><i class="fa fa-plus-circle"></i> ADD SECTION</div>
+  </a>
 </koss-wireframe>
+<div class="modal fade" [ngClass]="{show: selectedSection}" [ngStyle]="{display: selectedSection ? 'block' : 'none'}">
+  <div class="modal-dialog" *ngIf="selectedSection">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>{{selectedSection._id ? "Add" : "Edit"}} section</h5>
+      </div>
+      <div class="modal-body">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="sectionEnabledCheckbox" [(ngModel)]="selectedSection.enabled" />
+          <label class="custom-control-label" for="sectionEnabledCheckbox">Enabled</label>
+        </div>
+      </div>
+      <div class="modal-body border-top">
+        <ul class="nav nav-pills nav-fill">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="." (click)="selectLanguage('en')" [ngClass]="{active: selectedLanguage == 'en'}">🇺🇸 English</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="." (click)="selectLanguage('zh-cn')" [ngClass]="{active: selectedLanguage == 'zh-cn'}">🇨🇳 Chinese</a>
+          </li>
+        </ul>
+        <div class="form-group mt-3">
+          <label for="sectionNameField">Section Name</label>
+          <input type="text" class="form-control" id="sectionNameField" placeholder="Appetizers, Entrées, Desserts, etc." [(ngModel)]="names[selectedLanguage]" />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-danger" *ngIf="selectedSection._id" (click)="deleteSection()">Remove</button>
+        <button class="btn btn-secondary" (click)="cancelSection()">Cancel</button>
+        <button class="btn btn-primary" (click)="saveSection()">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-backdrop fade show" *ngIf="selectedSection"></div>
